@@ -1,0 +1,16 @@
+[
+{
+  "modid": "basestone",
+  "name": "BaseStone",
+  "description": "Multiple-state redstone mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["GenaBitu"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
