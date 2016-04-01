@@ -21,20 +21,22 @@ public class BaseStone {
     @Instance(value = BaseStone.MODID)
     public static BaseStone instance;
 
-    public static Item baseStoneDust;
+    public static BaseStoneDust baseStoneDust;
+    public static BaseStoneWire baseStoneWire;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
         baseStoneDust = new BaseStoneDust();
-        GameRegistry.registerItem(baseStoneDust, "baseStoneDust");
+        baseStoneWire = new BaseStoneWire();
     }
     @EventHandler
     public void load(FMLInitializationEvent event)
     {
         if(event.getSide() == Side.CLIENT)
         {
-            Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(baseStoneDust, 0, new ModelResourceLocation("basestone:baseStoneDust", "inventory"));
+            Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(baseStoneDust, 0, new ModelResourceLocation(MODID + ":" + baseStoneDust.name, "inventory"));
+            Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(baseStoneWire, 0, new ModelResourceLocation(MODID + ":" + baseStoneWire.name, "inventory"));
         }
     }
     @EventHandler
