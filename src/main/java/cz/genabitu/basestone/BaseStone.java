@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.relauncher.Side;
 
 @Mod(modid=BaseStone.MODID, name=BaseStone.MODNAME, version=BaseStone.MODVER)
 public class BaseStone {
@@ -31,8 +32,10 @@ public class BaseStone {
     @EventHandler
     public void load(FMLInitializationEvent event)
     {
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(baseStoneDust, 0, new ModelResourceLocation("basestone:baseStoneDust", "inventory"));
-
+        if(event.getSide() == Side.CLIENT)
+        {
+            Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(baseStoneDust, 0, new ModelResourceLocation("basestone:baseStoneDust", "inventory"));
+        }
     }
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)
