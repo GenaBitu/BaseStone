@@ -1,0 +1,6 @@
+{
+  "parent": "basestone:block/baseStoneWire_side_alt",
+  "textures": {
+    "line": "basestone:blocks/basestone_wire_line0"
+  }
+}

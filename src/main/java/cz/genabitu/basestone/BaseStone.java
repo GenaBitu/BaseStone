@@ -36,7 +36,7 @@ public class BaseStone {
         if(event.getSide() == Side.CLIENT)
         {
             Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(baseStoneDust, 0, new ModelResourceLocation(MODID + ":" + baseStoneDust.name, "inventory"));
-            Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(baseStoneWire, 0, new ModelResourceLocation(MODID + ":" + baseStoneWire.name, "inventory"));
+            Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(baseStoneWire), 0, new ModelResourceLocation(MODID + ":" + baseStoneWire.name, "inventory"));
         }
     }
     @EventHandler
