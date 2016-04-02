@@ -2,7 +2,7 @@
   "ambientocclusion": false,
   "textures": {
     "particle": "basestone:blocks/basestone_wire_dot",
-    "overlay": "blocks/basestone_wire_overlay"
+    "overlay": "basestone:blocks/basestone_wire_overlay"
   },
   "elements": [
     {   "from": [ 0, 0.25, 0 ],

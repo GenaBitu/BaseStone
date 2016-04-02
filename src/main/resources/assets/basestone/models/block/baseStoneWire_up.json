@@ -3,7 +3,7 @@
   "textures": {
     "particle": "basestone:blocks/basestone_wire_dot",
     "line": "basestone:blocks/basestone_wire_line0",
-    "overlay": "basestone:blocks/basedstone_wire_overlay"
+    "overlay": "basestone:blocks/basestone_wire_overlay"
   },
   "elements": [
     {   "from": [ 0, 0, 0.25 ],
