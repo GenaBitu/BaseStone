@@ -1,6 +1,7 @@
 package cz.genabitu.basestone;
 
 import net.minecraft.block.BlockRedstoneWire;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
@@ -14,8 +15,9 @@ public class BaseStoneWire extends BlockRedstoneWire {
         GameRegistry.registerBlock(this, name);
         setUnlocalizedName(name);
     }
-    
-    public Item getItemDropped(int metadata, Random random, int fortune)
+
+    @Override
+    public Item getItemDropped(IBlockState state, Random random, int fortune)
     {
         return BaseStone.baseStoneDust;
     }
